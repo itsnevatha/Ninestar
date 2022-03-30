@@ -1,0 +1,15 @@
+//header
+.navbar{
+    .nav-menus{
+        .navbar-nav {
+            .nav-item{
+                .nav-link{
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+

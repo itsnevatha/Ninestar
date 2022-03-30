@@ -1,0 +1,193 @@
+@import './abstracts/variables';
+@import './mixins/breakpoints';
+@import './abstracts/common';
+@import './includes/header';
+@import './includes/footer';
+.banner-section{
+    background-color: $bg;
+    .container{
+        h1{
+            font-weight: 700;
+            font-size: 2.5rem;
+            @include media-min-xl{
+                width: 80%;
+            }
+        }
+        p{
+            color: rgba(77, 48, 38, 0.658);
+            font-size: 20px;
+            @include media-min-xl{
+                width: 90%;
+            }
+        }
+        .banner-image {
+            @include media-min-lg-x{
+                width: 50%;
+            }
+            @include media-min-xl{
+                width: 60%;
+            }
+        }
+    }//container end
+}//banner section
+// ........................................
+.quasi-section{
+    text-align: center;
+    @include media-min-xl{
+        text-align: unset;
+    }
+    .quasi-image{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .quasi-content{
+        h3{
+            @include media-min-xl{
+                width: 90%;
+            }
+        }
+        .quasi-smallcontent{
+            h5{
+                font-size: 1.2rem;
+                
+               
+            } 
+        }
+    }
+}
+// ...................................
+.service-card-section{
+    background-color: $bg;
+    .container{
+        .card{
+            border-radius: 15px;
+        }
+    }
+}
+// .....................................
+.portfolio-section{
+    ul{
+        list-style-type: none;
+        li{
+            &:hover{
+                color: $orangered;
+            }
+        }
+    }
+    .portfolio-image{
+        img{
+            border-radius: 15px;
+        }
+    }
+}
+// .................................
+.faq-section{
+    background-color: $bg;
+    .faq-content{
+        .faq-list{
+            p{
+                display: none;
+            }
+            div:hover p{
+                display: block;
+            }
+
+        }
+    }
+}
+// ...............................................
+// client section starts
+.client-section{
+    background-color: $bg;
+    .container{
+        .row{
+        .carousel{
+            .carousel-indicators{
+                    button{
+                       border: 1px solid $orange; 
+                       height: 10px;
+                       width: 10px;
+                       border-radius: 50%;
+                    }
+                    button.active{
+                        background-color: orangered;
+                    }
+            }
+        }
+        }
+    }
+}
+// ..........................
+// contact section starts
+.contact-section{
+    .overall-card{
+        .left-content{
+            @include media-min-lg-x{
+                border-top: 2px solid $line;
+                border-bottom: 2px solid $line;
+            }
+            .contact-card{
+                i{
+                    background-color: $bg;
+                    border-radius: 50%;
+                    padding: .8rem ;
+                    font-size: 1.5rem;
+                    @include media-min-md{
+                        float: left;
+                        margin-right: 1rem;
+                    }
+                }
+                .icon{
+                    padding: .8rem 1.1rem;
+                }
+            }
+        }//left content end
+        .right-content{
+            @include media-min-lg-x{
+                border-top: 2px solid $line;
+                border-bottom: 2px solid $line;
+            }
+            label{
+                border-right: none;
+            }
+            .btn{
+                @include media-min-md{
+                    width: 30%;
+                    margin: 0 auto;
+                }
+               
+            }
+        }
+    }
+}
+// join section starts
+.join-section{
+    text-align: center;
+    background-color: $bg;
+    .overall-join-section{
+        ul{
+            input{
+                border: none;
+                width: 100%;
+                @include media-min-lg-x{
+                    width: 60%;
+                }
+                @include media-min-xl{
+                    right: 50%;
+                }
+            }
+            .footer-button{
+                padding-top: 2rem;
+                @include media-min-md{
+                    padding-top: unset;
+                    position: absolute;
+                    top: 0%;
+                    right: 0%;
+                }
+                @include media-min-lg-x{
+                    right: 18%;
+                }
+            }
+        }
+    }
+}
